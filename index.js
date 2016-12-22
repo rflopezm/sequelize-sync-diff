@@ -1,6 +1,7 @@
 var dbdiff = require('dbdiff')
 
-module.exports = function(Sequelize) {
+module.exports = function(Sequelize, diffOptions) {
+  diffOptions = diffOptions || {level: 'drop'};
   if (Sequelize.prototype.syncDiff) return
 
   var sequelizeMethods = ['define']
@@ -51,10 +52,10 @@ module.exports = function(Sequelize) {
     var diff = new dbdiff.DbDiff()
     return sequelize.sync({ force: true })
       .then(function() {
-        return diff.compare(selfOptions, url)
+        return diff.compare(selfOptions, url);
       })
       .then(function() {
-        return diff.commands('warn')
-      })
+        return diff.commands(diffOptions.level);
+      });
   }
 }
