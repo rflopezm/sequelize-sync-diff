@@ -54,7 +54,7 @@ module.exports = function(Sequelize) {
         return diff.compare(selfOptions, url)
       })
       .then(function() {
-        return diff.commands('drop')
+        return diff.commands('warn')
       })
   }
 }
