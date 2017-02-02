@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/gimenete/sequelize-sync-diff#readme",
   "dependencies": {
-    "dbdiff": "^0.4.2"
+    "dbdiff": "github:rflopezm/dbdiff"
   },
   "devDependencies": {
     "dedent": "^0.6.0",
