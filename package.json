@@ -1,6 +1,6 @@
 {
   "name": "sequelize-sync-diff",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Uses Sequelize.sync() but generates ALTER statements instead of DROP+CREATE",
   "main": "index.js",
   "scripts": {
