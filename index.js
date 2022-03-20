@@ -46,6 +46,7 @@ module.exports = function(Sequelize, diffOptions) {
       username: self.config.username,
       password: self.config.password,
       database: self.config.database,
+      port: self.config.port,
       host: self.config.host,
       dialectOptions: self.config.dialectOptions
     }
